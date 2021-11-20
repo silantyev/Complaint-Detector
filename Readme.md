@@ -41,7 +41,7 @@ pred = cd.predict(df['Text'])
 The module requires the following packages installed:
 * numpy >= 1.19.5
 * unidecode >= 1.2.0
-* tensorflow 2.5.1
+* tensorflow 2.5.2
 * transformers 4.12.3
 
 Older versions may also work, but it's not guaranteed.

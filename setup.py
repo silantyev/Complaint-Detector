@@ -8,5 +8,5 @@ setup(
     author_email='silantiev@inbox.ru',
     packages=['complaint_detector'],
     include_package_data=True,
-    install_requires=['numpy', 'unidecode', 'tensorflow==2.5.1', 'transformers==4.12.3'],
+    install_requires=['numpy>=1.19.5', 'unidecode>=1.2.0', 'tensorflow>=2.5.2', 'transformers>=4.12.3'],
 )
