@@ -1,2 +1,3 @@
 include *
-include weights/*
+include complaint_detector/*
+include complaint_detector/weights/*
