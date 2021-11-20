@@ -33,7 +33,7 @@ class ComplaintDetector():
     def predict(self, x):
         
         x = self.clean(x)
-        x = self.tokenize(x)
+        x = self.tokenize(x)[:2]
         return self.model.predict(x)[:,0]
     
     def evaluate(self, x, y):
