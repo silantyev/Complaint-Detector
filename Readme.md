@@ -4,7 +4,7 @@ This repository provides a model that detects the probability of complaint in a 
 ## Quick Start
 ### 1. Install the module
 ```
-pip NA
+pip install git+https://www.github.com/silantyev/Complaint-Detector.git
 ```
 ### 2. Import the class from the module
 ```python
