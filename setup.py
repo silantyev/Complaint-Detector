@@ -7,5 +7,5 @@ setup(
    author='Boris Silantev',
    author_email='silantiev@inbox.ru',
    packages=['complaint_detector'],
-   install_requires=['numpy', 'unidecode', 'tensorflow', 'transformers'],
+   install_requires=['numpy', 'unidecode', 'tensorflow==2.3.3', 'transformers==4.12.3'],
 )
