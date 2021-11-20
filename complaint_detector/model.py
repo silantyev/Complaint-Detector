@@ -45,7 +45,7 @@ def create_model(input_shape):
     
     model = Model(inputs=[input_ids_in, input_masks_in], outputs=global_out)
         
-    weights_path = module_path() + '/weights'
+    weights_path = os.path.join(module_path(),'weights/')
     for fold in range(3):
         for lname in ['b0','d0','out']:
             fnames = [fname for fname in os.listdir(weights_path) if (fname.startswith('{}_{}'.format(lname,fold))) and (fname.endswith('npy'))]
