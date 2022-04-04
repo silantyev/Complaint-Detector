@@ -6,21 +6,19 @@ from unidecode import unidecode
 def clean_tweet(
     q,
     replace_by_space=['/','(',')',',','#',"'"],
-    remove = [],
-    extra_w = ['+','-'],
-    keep = ["+",'-','.','"']
 ):
-    q = unidecode(q)
-    q = q.lower()
+    new_text = []
+    for t in text.split(" "):
+        t = '@user' if t.startswith('@') and len(t) > 1 else t
+        t = 'http' if t.startswith('http') else t
+        new_text.append(t)
+    q = " ".join(new_text)
+    replace_by_space=['/','(',')',',',"'",'#']
     for c in replace_by_space:
         q = q.replace(c, ' ')
-    for c in remove:
-        q = q.replace(c, '')
-    q = re.sub('[^\w{}]+'.format(''.join([re.escape(c) for c in keep])),' ',q)
-    q = re.sub('\.\.+','. ',q)
-    q = re.sub('\.(?:\s|$)',' ',q)
     q = re.sub('\s+',' ',q)
     q = q.strip()
+    
     return q
 
 def we_are_frozen():
