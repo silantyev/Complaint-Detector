@@ -13,7 +13,6 @@ def clean_tweet(
         t = 'http' if t.startswith('http') else t
         new_text.append(t)
     q = " ".join(new_text)
-    replace_by_space=['/','(',')',',',"'",'#']
     for c in replace_by_space:
         q = q.replace(c, ' ')
     q = re.sub('\s+',' ',q)
