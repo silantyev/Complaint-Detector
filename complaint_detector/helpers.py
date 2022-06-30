@@ -4,7 +4,7 @@ import sys
 from unidecode import unidecode
 
 def clean_tweet(
-    q,
+    text,
     replace_by_space=['/','(',')',',','#',"'"],
 ):
     new_text = []
